@@ -2,30 +2,21 @@ package com.example.sampleproject;
 
 import java.io.IOException;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class EntranceWindowController {
 
     @FXML
-    private Button exitButton;
-
-    @FXML
-    private Button startButton;
-
-    @FXML
-    void startGame(ActionEvent event) throws IOException {
-        System.out.println("Game started!");
-
+    void startGame(){
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("GameWindow.fxml"));
         try
         {
+            GameWindowController.attack();
             loader.load();
         } catch (IOException e)
         {
@@ -39,7 +30,7 @@ public class EntranceWindowController {
     }
 
     @FXML
-    void exitGame(ActionEvent event) {
+    void exitGame() {
         System.exit(0);
     }
 
