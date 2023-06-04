@@ -20,7 +20,7 @@ public class EntranceWindowController {
 
     @FXML
     void startGame(ActionEvent event) throws IOException {
-    	System.out.println("Game started!");
+        System.out.println("Game started!");
 
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("GameWindow.fxml"));
@@ -31,7 +31,7 @@ public class EntranceWindowController {
         {
             e.printStackTrace();
         }
-        
+
         Parent root = loader.getRoot();
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
@@ -40,7 +40,7 @@ public class EntranceWindowController {
 
     @FXML
     void exitGame(ActionEvent event) {
-    	System.exit(0);
+        System.exit(0);
     }
 
 }

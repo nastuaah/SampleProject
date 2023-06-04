@@ -21,7 +21,7 @@ public class GameWindowController {
 
     @FXML
     private GridPane deskAnswerCardPane;
-    
+
     @FXML
     private ScrollPane firstPlayerScroll;
 
@@ -36,17 +36,17 @@ public class GameWindowController {
 
     @FXML
     void addCard(ActionEvent event) throws IOException, InterruptedException {
-    	FXMLLoader loader = new FXMLLoader();
+        FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("Card.fxml"));
-        
-    	Pane newPane = (Pane)loader.load();
-    	
-    	CardController cardController = loader.getController();
-    	cardController.setCardParameters("6", "bubi", this, newPane);
 
-    	firstPlayerPane.getChildren().add(newPane);
-    	firstPlayerScroll = new ScrollPane();
-    	firstPlayerScroll.setContent(firstPlayerPane);
+        Pane newPane = (Pane)loader.load();
+
+        CardController cardController = loader.getController();
+        cardController.setCardParameters("6", "bubi", this, newPane);
+
+        firstPlayerPane.getChildren().add(newPane);
+        firstPlayerScroll = new ScrollPane();
+        firstPlayerScroll.setContent(firstPlayerPane);
 
         secondPlayerPane.getChildren().add(newPane);
         secondPlayerScroll = new ScrollPane();
@@ -54,14 +54,14 @@ public class GameWindowController {
     }
 
     public void addCardOnTable(CardController card) throws IOException {
-    	FXMLLoader loader = new FXMLLoader();
+        FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("Card.fxml"));
-        
-    	Pane newPane = (Pane)loader.load();
-    	
-    	CardController cardController = loader.getController();
-    	cardController.setCardParameters(card.getNominal(), card.getMask(), this, newPane);
-    	
-    	deskAttackCardPane.add(newPane, deskAttackCardPane.getChildren().size(), 0);
+
+        Pane newPane = (Pane)loader.load();
+
+        CardController cardController = loader.getController();
+        cardController.setCardParameters(card.getNominal(), card.getMask(), this, newPane);
+
+        deskAttackCardPane.add(newPane, deskAttackCardPane.getChildren().size(), 0);
     }
 }
