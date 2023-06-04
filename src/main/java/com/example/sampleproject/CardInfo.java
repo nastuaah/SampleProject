@@ -3,11 +3,11 @@ package com.example.sampleproject;
 public class CardInfo {
 
     public static final String[] nominal = new String[] {
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
+            "Six",
+            "Seven",
+            "Eight",
+            "Nine",
+            "Ten",
             "Jack",
             "Queen",
             "King",

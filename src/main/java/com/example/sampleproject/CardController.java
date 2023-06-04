@@ -10,6 +10,7 @@ public class CardController {
 	Pane cardPane;
 
 	GameWindowController gameWindow;
+
 	@FXML
 	private Label nominal;
 
