@@ -114,7 +114,7 @@ public class GameWindowController {
                 add2.setDisable(false);
         }
     }
-    public static void attacker(){
+    public static void attack(){
         Random random = new Random();
         attacker = random.nextInt(2) + 1;
     }
