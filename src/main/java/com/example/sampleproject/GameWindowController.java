@@ -124,7 +124,7 @@ public class GameWindowController {
         String card = "";
         while (already_use.size() < 36) {
             int nominalIndex = random.nextInt(nominal.length);
-            int mastIndex = random.nextInt(mask.length);
+            int maskIndex = random.nextInt(mask.length);
             card = nominal[nominalIndex] + "_" + mask[maskIndex];
             if (!already_use.contains(card)) {
                 already_use.add(card);
